@@ -1,0 +1,33 @@
+<div class="maincontent">
+  <div class="whitebox">
+    <div class="topbar">
+      <p>. . .</p>
+    </div>
+
+
+  <div class="container">
+    <h1>Locations list!</h1>
+
+    #if ($tasks)
+      <ul>
+        #foreach ($task in $tasks)
+          <li>$task.getDescription()</li>
+        #end
+      </ul>
+    #else
+
+      <p>No locations!</p>
+    #end
+
+    <p>Add a new Locations:</p>
+
+    <form action="/tasks" method="post">
+      <label for="description">Locations Description</label>
+      <input id="description" name="description" type="text">
+
+      <button type="submit" class="btn btn-default">Add task</button>
+    </form>
+  </div>
+
+  </div>
+</div>
